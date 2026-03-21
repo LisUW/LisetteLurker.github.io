@@ -1,41 +1,99 @@
 body {
-    background-color: #ffdce6; /* soft pastel pink */
-    font-family: "Georgia", serif;
+    background-color: #ffdce6;
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    color: #2d2d2d;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
 }
 
 h1, h2, h3 {
-    font-family: "Georgia", serif;
+    font-family: Georgia, serif;
+    color: #7a1f47;
 }
 
-/* Make all menu photos the same size */
-nav img {
-    width: 120px;   /* same size for all */
-    height: 120px;  /* square */
-    object-fit: cover; /* crop to avoid distortion */
-    border-radius: 10px; /* soft rounded corners */
-    border: 2px solid white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+p {
+    max-width: 900px;
+    margin: 10px auto;
 }
 
-/* Optional: center links and give a cute style */
+nav {
+    background: rgba(255, 255, 255, 0.45);
+    padding: 15px 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    text-align: center;
 }
 
 nav a {
     text-decoration: none;
-    color: #c2185b; /* stronger pink */
+    color: #c2185b;
     font-weight: bold;
-    text-align: center;
+    display: inline-block;
 }
 
-/* --- Thumbnail grid only for the Awards gallery --- */
+nav img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto 8px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.profile-photo {
+    width: 220px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 16px;
+    border: 4px solid white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.video-thumb {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
 .gallery {
-    /* responsive grid for thumbnails */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 14px;
@@ -44,29 +102,50 @@ nav a {
 }
 
 .gallery img {
-    /* keep images small and avoid distortion */
-    width: 100%;           /* fill the grid cell */
-    height: 160px;         /* consistent thumbnail height */
-    object-fit: cover;     /* crop without distortion */
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
     border-radius: 10px;
     border: 2px solid #fff;
     box-shadow: 0 2px 6px rgba(0,0,0,0.12);
     display: block;
 }
 
-/* On large screens, increase height for better detail */
+a {
+    color: #a31554;
+}
+
+a:hover {
+    color: #7a1f47;
+}
+
 @media (min-width: 768px) {
     .gallery img {
         height: 200px;
     }
 }
 
-/* On very small screens, reduce height to fit more images */
+@media (max-width: 600px) {
+    header {
+        padding: 28px 14px 14px;
+    }
+
+    nav img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-photo {
+        width: 180px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
+
 @media (max-width: 380px) {
     .gallery img {
         height: 130px;
     }
 }
-body {
-    padding: 20px;
-  }
