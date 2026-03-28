@@ -102,11 +102,12 @@ section {
 .project-img {
     width: 100%;
     max-width: 600px;
-    height: 300px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     display: block;
     margin: 15px auto;
     border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 a {
     color: #a31554;
