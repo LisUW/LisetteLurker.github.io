@@ -26,7 +26,13 @@ nav {
     background: rgba(255, 255, 255, 0.45);
     padding: 15px 10px;
 }
-
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 12px;
+}
 nav ul {
     list-style: none;
     padding: 0;
